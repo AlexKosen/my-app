@@ -18,7 +18,7 @@ export default function AppHeader() {
   const [select, setSelect] = useState(false);
   const [modal, setModal] = useState(false);
   const [coin, setCoin] = useState(null);
-  const [drawer, setDrawer] = useState(false);
+  const [drawer, setDrawer] = useState(true);
 
   const { crypto } = useCrypto();
 
@@ -78,6 +78,7 @@ export default function AppHeader() {
         width={600}
         onClose={() => setDrawer(false)}
         open={drawer}
+        destroyOnClose
       >
         <AddAssetForm />
       </Drawer>
